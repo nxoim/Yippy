@@ -145,7 +145,6 @@
 		DB8E79362B7ACBCC006860F1 /* Default in Frameworks */ = {isa = PBXBuildFile; productRef = DB8E79352B7ACBCC006860F1 /* Default */; };
 		DB8E79382B7ACBE2006860F1 /* Default in Frameworks */ = {isa = PBXBuildFile; productRef = DB8E79372B7ACBE2006860F1 /* Default */; };
 		DB8E793A2B7ACBE7006860F1 /* Default in Frameworks */ = {isa = PBXBuildFile; productRef = DB8E79392B7ACBE7006860F1 /* Default */; };
-		DB8E793C2B7AD158006860F1 /* YippyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E793B2B7AD158006860F1 /* YippyView.swift */; };
 		DB8E793F2B7AD1F8006860F1 /* YippyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E793E2B7AD1F8006860F1 /* YippyViewModel.swift */; };
 		DB93406F2B7AE28800157394 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93406E2B7AE28800157394 /* BlurView.swift */; };
 		DB93407C2B7B8FBF00157394 /* HistoryTextCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93407B2B7B8FBF00157394 /* HistoryTextCellView.swift */; };
@@ -158,6 +157,15 @@
 		DB93408B2B7B98FE00157394 /* HistoryFileThumbnailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93408A2B7B98FE00157394 /* HistoryFileThumbnailCellView.swift */; };
 		DB93408D2B7B9D8C00157394 /* HistoryItem+Transferrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB93408C2B7B9D8C00157394 /* HistoryItem+Transferrable.swift */; };
 		DBF3F3742B7BB77300581C6B /* SafariPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3F3732B7BB77300581C6B /* SafariPreviewController.swift */; };
+		EDA3EE1E2C8F549300D0BA19 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EE182C8F549300D0BA19 /* SearchBar.swift */; };
+		EDA3EE1F2C8F549300D0BA19 /* StyledHistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EE192C8F549300D0BA19 /* StyledHistoryViewCell.swift */; };
+		EDA3EE202C8F549300D0BA19 /* GrabHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EE132C8F549300D0BA19 /* GrabHandle.swift */; };
+		EDA3EE212C8F549300D0BA19 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EE1A2C8F549300D0BA19 /* Utils.swift */; };
+		EDA3EE222C8F549300D0BA19 /* HistoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EE172C8F549300D0BA19 /* HistoryTableView.swift */; };
+		EDA3EE232C8F549300D0BA19 /* HistoryCellShortcutHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EE162C8F549300D0BA19 /* HistoryCellShortcutHint.swift */; };
+		EDA3EE242C8F549300D0BA19 /* HistoryCellSelectedIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EE152C8F549300D0BA19 /* HistoryCellSelectedIndicator.swift */; };
+		EDA3EE252C8F549300D0BA19 /* YippyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EE1C2C8F549300D0BA19 /* YippyView.swift */; };
+		EDA3EE262C8F549300D0BA19 /* HistoryCellContextButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3EE142C8F549300D0BA19 /* HistoryCellContextButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -302,7 +310,6 @@
 		34EC0FF82504ADE7004E1A63 /* SearchEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngine.swift; sourceTree = "<group>"; };
 		34F1047C23542CCE00B65251 /* HistoryItem+YippyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryItem+YippyItem.swift"; sourceTree = "<group>"; };
 		DB2C2EF02B7BE864007B007A /* HistoryFileIconCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFileIconCellView.swift; sourceTree = "<group>"; };
-		DB8E793B2B7AD158006860F1 /* YippyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YippyView.swift; sourceTree = "<group>"; };
 		DB8E793E2B7AD1F8006860F1 /* YippyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YippyViewModel.swift; sourceTree = "<group>"; };
 		DB93406E2B7AE28800157394 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		DB93407B2B7B8FBF00157394 /* HistoryTextCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTextCellView.swift; sourceTree = "<group>"; };
@@ -314,6 +321,15 @@
 		DB93408A2B7B98FE00157394 /* HistoryFileThumbnailCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFileThumbnailCellView.swift; sourceTree = "<group>"; };
 		DB93408C2B7B9D8C00157394 /* HistoryItem+Transferrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryItem+Transferrable.swift"; sourceTree = "<group>"; };
 		DBF3F3732B7BB77300581C6B /* SafariPreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariPreviewController.swift; sourceTree = "<group>"; };
+		EDA3EE132C8F549300D0BA19 /* GrabHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrabHandle.swift; sourceTree = "<group>"; };
+		EDA3EE142C8F549300D0BA19 /* HistoryCellContextButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellContextButtons.swift; sourceTree = "<group>"; };
+		EDA3EE152C8F549300D0BA19 /* HistoryCellSelectedIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellSelectedIndicator.swift; sourceTree = "<group>"; };
+		EDA3EE162C8F549300D0BA19 /* HistoryCellShortcutHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellShortcutHint.swift; sourceTree = "<group>"; };
+		EDA3EE172C8F549300D0BA19 /* HistoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableView.swift; sourceTree = "<group>"; };
+		EDA3EE182C8F549300D0BA19 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		EDA3EE192C8F549300D0BA19 /* StyledHistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledHistoryViewCell.swift; sourceTree = "<group>"; };
+		EDA3EE1A2C8F549300D0BA19 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		EDA3EE1C2C8F549300D0BA19 /* YippyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YippyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -750,8 +766,8 @@
 		DB8E793D2B7AD1EE006860F1 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				EDA3EE1D2C8F549300D0BA19 /* ClipboardView */,
 				DB9340702B7B801B00157394 /* Cells */,
-				DB8E793B2B7AD158006860F1 /* YippyView.swift */,
 				DB8E793E2B7AD1F8006860F1 /* YippyViewModel.swift */,
 				DB93406E2B7AE28800157394 /* BlurView.swift */,
 				DB9340812B7B905300157394 /* HistoryCellSettings.swift */,
@@ -771,6 +787,30 @@
 				DB2C2EF02B7BE864007B007A /* HistoryFileIconCellView.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		EDA3EE1B2C8F549300D0BA19 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EDA3EE132C8F549300D0BA19 /* GrabHandle.swift */,
+				EDA3EE142C8F549300D0BA19 /* HistoryCellContextButtons.swift */,
+				EDA3EE152C8F549300D0BA19 /* HistoryCellSelectedIndicator.swift */,
+				EDA3EE162C8F549300D0BA19 /* HistoryCellShortcutHint.swift */,
+				EDA3EE172C8F549300D0BA19 /* HistoryTableView.swift */,
+				EDA3EE182C8F549300D0BA19 /* SearchBar.swift */,
+				EDA3EE192C8F549300D0BA19 /* StyledHistoryViewCell.swift */,
+				EDA3EE1A2C8F549300D0BA19 /* Utils.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EDA3EE1D2C8F549300D0BA19 /* ClipboardView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA3EE1B2C8F549300D0BA19 /* Components */,
+				EDA3EE1C2C8F549300D0BA19 /* YippyView.swift */,
+			);
+			path = ClipboardView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -969,7 +1009,6 @@
 				34B2FD9722F98C4E0068D50A /* NSMenu+Functional.swift in Sources */,
 				DB8E793F2B7AD1F8006860F1 /* YippyViewModel.swift in Sources */,
 				345B14B12341AF1900C2D0DA /* KeyPressHelperMock.swift in Sources */,
-				DB8E793C2B7AD158006860F1 /* YippyView.swift in Sources */,
 				345B14AF2341AEEA00C2D0DA /* KeyPressHelper.swift in Sources */,
 				341D9D31233725CA008A2BE6 /* KeyUpEventMonitor.swift in Sources */,
 				340FB43B236407D70053D82C /* Controller.swift in Sources */,
@@ -1006,6 +1045,15 @@
 				34F1047D23542CCE00B65251 /* HistoryItem+YippyItem.swift in Sources */,
 				34D018E5232A2B73006259E1 /* WaitingViewController.swift in Sources */,
 				341D9D3523373083008A2BE6 /* YippyHotKey.swift in Sources */,
+				EDA3EE1E2C8F549300D0BA19 /* SearchBar.swift in Sources */,
+				EDA3EE1F2C8F549300D0BA19 /* StyledHistoryViewCell.swift in Sources */,
+				EDA3EE202C8F549300D0BA19 /* GrabHandle.swift in Sources */,
+				EDA3EE212C8F549300D0BA19 /* Utils.swift in Sources */,
+				EDA3EE222C8F549300D0BA19 /* HistoryTableView.swift in Sources */,
+				EDA3EE232C8F549300D0BA19 /* HistoryCellShortcutHint.swift in Sources */,
+				EDA3EE242C8F549300D0BA19 /* HistoryCellSelectedIndicator.swift in Sources */,
+				EDA3EE252C8F549300D0BA19 /* YippyView.swift in Sources */,
+				EDA3EE262C8F549300D0BA19 /* HistoryCellContextButtons.swift in Sources */,
 				345B14B32341AFB800C2D0DA /* KeyPressMock.swift in Sources */,
 				34417677240863930076BEDA /* SettingsWindowController.swift in Sources */,
 				3490D3972328D6BD00BA8747 /* WelcomeViewController.swift in Sources */,
