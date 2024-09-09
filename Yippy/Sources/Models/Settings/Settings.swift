@@ -17,14 +17,12 @@ struct Settings: Codable, DefaultStorable {
     // MARK: - Singleton
     
     private init(
-        panelPosition: PanelPosition,
         pasteboardChangeCount: Int,
         toggleHotKey: KeyCombo,
         maxHistory: Int,
         showsRichText: Bool,
         pastesRichText: Bool
     ) {
-        self.panelPosition = panelPosition
         self.pasteboardChangeCount = pasteboardChangeCount
         self.toggleHotKey = toggleHotKey
         self.maxHistory = maxHistory
@@ -48,7 +46,6 @@ struct Settings: Codable, DefaultStorable {
     // MARK: - Default
     
     static let `default` = Settings(
-        panelPosition: .right,
         pasteboardChangeCount: -1,
         toggleHotKey: KeyCombo(key: .v, modifiers: [.command, .shift]),
         maxHistory: Constants.settings.maxHistoryItemsDefault,
@@ -57,9 +54,7 @@ struct Settings: Codable, DefaultStorable {
     )
     
     // MARK: - Settings
-    
-    var panelPosition: PanelPosition
-    
+        
     var pasteboardChangeCount: Int
     
     var toggleHotKey: KeyCombo
@@ -72,12 +67,6 @@ struct Settings: Codable, DefaultStorable {
     
     
     // MARK: - State Binding Methods
-    
-    func bindPanelPositionTo(state: BehaviorRelay<PanelPosition>) -> Disposable {
-        return state.bind { (x) in
-            Settings.main.panelPosition = x
-        }
-    }
     
     func bindPasteboardChangeCountTo(state: Observable<Int>) -> Disposable {
         return state.bind { (x) in
@@ -109,7 +98,7 @@ extension Settings {
     struct testData {
         static var a: Settings {
             var settings = Settings.default
-            settings.panelPosition = .left
+//            settings.panelPosition = .left TODO cleanup
             return settings
         }
         

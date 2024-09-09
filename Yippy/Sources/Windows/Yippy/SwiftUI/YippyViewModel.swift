@@ -47,8 +47,6 @@ class YippyViewModel {
     func onAppear() {
         State.main.history.subscribe(onNext: onHistoryChange)
         
-        State.main.panelPosition.subscribe(onNext: onWindowPanelPositionChanged).disposed(by: disposeBag)
-        
         State.main.showsRichText.distinctUntilChanged().subscribe(onNext: onShowsRichText).disposed(by: disposeBag)
         
         Observable.combineLatest(
@@ -73,10 +71,10 @@ class YippyViewModel {
         YippyHotKeys.pageUp.onLong(goToPreviousItem)
         YippyHotKeys.escape.onDown(close)
         YippyHotKeys.return.onDown(pasteSelected)
-        YippyHotKeys.ctrlAltCmdLeftArrow.onDown { State.main.panelPosition.accept(.left) }
-        YippyHotKeys.ctrlAltCmdRightArrow.onDown { State.main.panelPosition.accept(.right) }
-        YippyHotKeys.ctrlAltCmdDownArrow.onDown { State.main.panelPosition.accept(.bottom) }
-        YippyHotKeys.ctrlAltCmdUpArrow.onDown { State.main.panelPosition.accept(.top) }
+//        YippyHotKeys.ctrlAltCmdLeftArrow.onDown { State.main.panelPosition.accept(.left) }
+//        YippyHotKeys.ctrlAltCmdRightArrow.onDown { State.main.panelPosition.accept(.right) }
+//        YippyHotKeys.ctrlAltCmdDownArrow.onDown { State.main.panelPosition.accept(.bottom) }
+//        YippyHotKeys.ctrlAltCmdUpArrow.onDown { State.main.panelPosition.accept(.top) }
         YippyHotKeys.ctrlDelete.onDown(deleteSelected)
         YippyHotKeys.space.onDown(togglePreview)
         YippyHotKeys.cmdBackslash.onDown(focusSearchBar)

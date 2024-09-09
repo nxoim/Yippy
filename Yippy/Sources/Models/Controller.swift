@@ -88,10 +88,6 @@ class Controller {
                 .with(state: .off)
             )
             .with(menuItem: NSMenuItem(title: "Clear history", action: #selector(clearHistoryClicked), keyEquivalent: ""))
-            .with(menuItem: NSMenuItem(title: "Position", action: nil, keyEquivalent: "")
-                .with(accessibilityIdentifier: Accessibility.identifiers.positionButton)
-                .with(submenu: createWindowPositionSubmenu(settings: settings))
-            )
             .with(menuItem: NSMenuItem.separator())
             .with(menuItem: NSMenuItem(title: "Quit", action: #selector(quit), keyEquivalent: "")
                 .with(accessibilityIdentifier: Accessibility.identifiers.quitButton)
@@ -103,14 +99,6 @@ class Controller {
         state.launchAtLogin
             .subscribe (onNext: {
                 menu.item(withTitle: "Launch at Login")?.state = $0 ? .on : .off
-            })
-            .disposed(by: state.disposeBag)
-        
-        state.panelPosition
-            .subscribe(onNext: { next in
-                PanelPosition.allCases.forEach { pos in
-                    menu.item(withTitle: "Position")?.submenu?.item(withTag: pos.rawValue)?.state = next == pos ? .on : .off
-                }
             })
             .disposed(by: state.disposeBag)
         
@@ -137,17 +125,6 @@ class Controller {
         return menu
     }
     
-    static func createWindowPositionSubmenu(settings: Settings) -> NSMenu {
-        let menu = NSMenu(title: "")
-        menu.items = PanelPosition.allCases.map({pos in
-            return NSMenuItem(title: pos.title, action: #selector(panelPositionSelected(_:)), keyEquivalent: "")
-                .with(accessibilityIdentifier: pos.identifier)
-                .with(state: settings.panelPosition == pos ? .on : .off)
-                .with(tag: pos.rawValue)
-        })
-        return menu
-    }
-    
     static func setMenuItemsTarget(target: AnyObject?, menu: NSMenu) {
         for item in menu.items {
             item.target = target
@@ -162,9 +139,7 @@ class Controller {
         controller
             .subscribeTo(toggle: state.isHistoryPanelShown)
             .disposed(by: disposeBag)
-        controller
-            .subscribeFrameTo(position: state.panelPosition.asObservable(), screen: state.currentScreen.asObservable())
-            .disposed(by: disposeBag)
+        
         return controller
     }
     
@@ -174,17 +149,6 @@ class Controller {
             .subscribeTo(previewItem: previewItem)
             .disposed(by: disposeBag)
         return controller
-    }
-    
-    
-    // MARK: - Methods
-    @objc func panelPositionSelected(_ sender: NSMenuItem) {
-        if let position = PanelPosition(rawValue: sender.tag) {
-            state.panelPosition.accept(position)
-        }
-        else {
-            YippyError(localizedDescription: "Received invalid panel position from \(sender)").log(with: ErrorLogger.general)
-        }
     }
 
     @objc func togglePopover() {

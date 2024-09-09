@@ -21,9 +21,7 @@ class State {
     // MARK: - Attributes
     // RxSwift
     var isHistoryPanelShown: BehaviorRelay<Bool>
-    
-    var panelPosition: BehaviorRelay<PanelPosition>
-    
+        
     var currentScreen: BehaviorRelay<NSScreen>
     
     var previewHistoryItem: BehaviorRelay<HistoryItem?>
@@ -48,7 +46,6 @@ class State {
     init(settings: Settings = Settings.main, disposeBag: DisposeBag = DisposeBag()) {
         // Setup RxSwift attributes
         self.isHistoryPanelShown = BehaviorRelay<Bool>(value: false)
-        self.panelPosition = BehaviorRelay<PanelPosition>(value: settings.panelPosition)
         self.previewHistoryItem = BehaviorRelay<HistoryItem?>(value: nil)
         self.launchAtLogin = BehaviorRelay<Bool>(value: LoginServiceKit.isExistLoginItems())
         self.showsRichText = BehaviorRelay<Bool>(value: settings.showsRichText)
@@ -76,7 +73,6 @@ class State {
     
     static func bind(settings: Settings, toState state: State, disposeBag: DisposeBag) {
         settings.bindPasteboardChangeCountTo(state: state.history!.observableLastRecordedChangeCount).disposed(by: disposeBag)
-        settings.bindPanelPositionTo(state: state.panelPosition).disposed(by: disposeBag)
         settings.bindMaxHistoryTo(state: state.history.maxItems).disposed(by: disposeBag)
         settings.bindShowsRichTextTo(state: state.showsRichText.asObservable()).disposed(by: disposeBag)
         settings.bindPastesRichTextTo(state: state.pastesRichText.asObservable()).disposed(by: disposeBag)
