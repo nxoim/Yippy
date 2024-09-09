@@ -139,14 +139,8 @@ class Controller {
         controller
             .subscribeTo(toggle: state.isHistoryPanelShown)
             .disposed(by: disposeBag)
-        
-        
-        controller.window?.backgroundColor = .clear
 
-        if let screen = NSScreen.main {
-            let screenFrame = screen.visibleFrame
-            controller.window?.setFrame(screenFrame, display: true)  // Set the window frame to the screen size
-        }
+        controller.window?.backgroundColor = .clear
         
         return controller
     }
@@ -160,6 +154,11 @@ class Controller {
     }
 
     @objc func togglePopover() {
+        if let screen = NSScreen.main {
+            let screenFrame = screen.visibleFrame
+            yippyWindowController.window?.setFrame(screenFrame, display: true)  // Set the window frame to the screen size
+        }
+        
         state.isHistoryPanelShown.accept(!state.isHistoryPanelShown.value)
     }
     
