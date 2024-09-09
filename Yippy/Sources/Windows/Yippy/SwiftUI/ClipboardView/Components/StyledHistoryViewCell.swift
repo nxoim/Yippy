@@ -19,11 +19,10 @@ struct StyledHistoryViewCell: View {
         HistoryCellView(item: item, proxy: proxy, usingItemRtf: isRichText)
             .background(
                 Rectangle()
-                    .fill(Color(NSColor.windowBackgroundColor))
-                    .opacity(0.0)
-                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
-                    .shadow(radius: 8)
+                    .fill(Color(NSColor.clear))
+                    .background(.ultraThinMaterial)
             )
+            .clipShape(RoundedRectangle(cornerRadius: 16))
             .overlay {
                 ZStack(alignment: .topLeading) {
                     HistoryCellShortcutHint(index: index, isSelected: isSelected)
@@ -36,5 +35,6 @@ struct StyledHistoryViewCell: View {
             .contextMenu { HistoryCellContextButtons(onCopy: onCopy, onDelete: onDelete) }
             .id(item)
             .draggable(item)
+            .shadow(radius: 8)
     }
 }
