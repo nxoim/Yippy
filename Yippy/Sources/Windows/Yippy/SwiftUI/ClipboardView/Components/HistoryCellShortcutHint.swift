@@ -1,3 +1,10 @@
+import Cocoa
+import HotKey
+import RxSwift
+import RxRelay
+import RxCocoa
+import SwiftUI
+
 struct HistoryCellShortcutHint : View {
     let index: Int
     let isSelected: Bool

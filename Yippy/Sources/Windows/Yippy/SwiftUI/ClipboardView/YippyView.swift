@@ -24,12 +24,6 @@ class SUIYippyViewController: NSHostingController<YippyView> {
             )
         )
     }
-    
-    
-}
-
-enum Focus {
-    case searchbar
 }
 
 struct YippyView : View {

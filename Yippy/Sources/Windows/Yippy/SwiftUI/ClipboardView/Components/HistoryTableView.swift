@@ -1,3 +1,10 @@
+import Cocoa
+import HotKey
+import RxSwift
+import RxRelay
+import RxCocoa
+import SwiftUI
+
 struct HistoryTableView: View {
     
     @Bindable var viewModel: YippyViewModel
